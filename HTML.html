@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deadline Reminder</title>
+</head>
+<body>
+    <h1>Deadline Reminder Dashboard</h1>
+    <form id="add-deadline-form">
+        <input type="text" placeholder="Task" id="task" required>
+        <input type="date" id="deadline_date" required>
+        <input type="email" placeholder="Email" id="email" required>
+        <button type="submit">Add Deadline</button>
+    </form>
+    <div id="deadlines"></div>
+    <script>
+        const form = document.getElementById('add-deadline-form');
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const task = document.getElementById('task').value;
+            const deadline_date = document.getElementById('deadline_date').value;
+            const email = document.getElementById('email').value;
+            const response = await fetch('/add_deadline', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ task, deadline_date, email })
+            });
+            const data = await response.json();
+            alert(data.message);
+        });
+    </script>
+</body>
+</html>
