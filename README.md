@@ -14,7 +14,7 @@ The "Deadline Reminder Assistant for Teams" is a lightweight tool designed for f
 
 ## Setup Instructions
 1. Clone the repository:
-   git clone [repository-url]
+   git clone [https://github.com/TrishaKasumbiwal07/Deadline-Reminder-Assistant-for-Teams/tree/main]
 
 2. Navigate to the project directory:  
    cd deadline-reminder-assistant
