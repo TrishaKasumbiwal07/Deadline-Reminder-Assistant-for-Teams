@@ -1,0 +1,6 @@
+flask
+schedule
+flask-cors
+sendgrid
+sqlite3
+
